@@ -7,16 +7,24 @@ import {
 } from "@/components/ui/carousel";
 
 export const Gallery = () => {
-  // Placeholder gallery images - replace with actual portfolio images
+  // Actual portfolio images
   const galleryImages = [
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+    "https://ainan.studio/img/0FK_1526.jpg?w=400&h=400&fit=crop&crop=face",
+    "https://ainan.studio/img/20191208-LAN_0281.jpg?w=400&h=400&fit=crop&crop=face",
+    "https://ainan.studio/img/AIN00523.jpg?w=400&h=400&fit=crop&crop=face",
+    "https://ainan.studio/img/AIN00718.jpg?w=400&h=400&fit=crop&crop=face",
+    "https://ainan.studio/img/Amin%20Rashidi%20Studio-664.jpg?w=400&h=400&fit=crop&crop=face",
+    "https://ainan.studio/img/DSC_3411.jpg?w=400&h=400&fit=crop&crop=face",
+    "https://ainan.studio/img/FKP03731.jpg?w=400&h=400&fit=crop&crop=face",
+    "https://ainan.studio/img/FKP03833.jpg?w=400&h=400&fit=crop&crop=face",
+    "https://ainan.studio/img/FKP03935.jpg?w=400&h=400&fit=crop&crop=face",
+    "https://drive.google.com/uc?export=view&id=1aBSTXquiT9oH-gx_zchHfZYtJNQX7P_S",
+    "https://drive.google.com/uc?export=view&id=1fAAx3-CBmeuJHe29POHVOZQbt2b44BIf",
+    "https://drive.google.com/uc?export=view&id=1wJnRG_COd16WhAtxOZ7reZjCAwdFcirG",
+    "https://drive.google.com/uc?export=view&id=1DKNgTwS3da7xr528YcZTUjESZJSAAqNn",
+    "https://drive.google.com/uc?export=view&id=1zZJFCjjRG_hKQ3dtLhqDg73NdIYv--V-",
+    "https://drive.google.com/uc?export=view&id=1ta-7ClUSFA19RjrUkKjFXJ3EYqfYJdN8",
+    "https://drive.google.com/uc?export=view&id=1kGsm92uGnQAcnAmqbEXrEKihSYw99IzL",
   ];
 
   return (
