@@ -41,20 +41,6 @@ export const Hero = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-accent">350+</div>
-            <div className="text-white/80">Happy Clients</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-accent">48h</div>
-            <div className="text-white/80">Rush Delivery</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-accent">100%</div>
-            <div className="text-white/80">On-Site Service</div>
-          </div>
-        </div>
       </div>
     </section>
   );
