@@ -7,8 +7,8 @@ export const PricingSection = () => {
       price: "RM 350",
       description: "For individuals who want to stand out professionally.",
       features: [
-        "20–30 min session at your location",
-        "3 final retouched images (client selects from gallery)",
+        "15 min session at your location",
+        "4-5 final retouched images (client selects from gallery)",
         "1 outfit, 1 background setup",
         "Web + print resolution delivery",
         "3–5 working day turnaround"
