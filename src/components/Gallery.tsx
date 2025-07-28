@@ -46,9 +46,9 @@ export const Gallery = () => {
           }}
           className="w-full"
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent>
             {galleryImages.map((image, index) => (
-              <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+              <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <div className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-elegant transition-all duration-300">
                   <img
                     src={image}
