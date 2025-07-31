@@ -10,12 +10,12 @@ export const Header = () => {
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#packages" className="text-foreground hover:text-accent transition-colors">Packages</a>
-          <a href="#add-ons" className="text-foreground hover:text-accent transition-colors">Add-ons</a>
-          <a href="#contact" className="text-foreground hover:text-accent transition-colors">Contact</a>
+          <a href="/services" className="text-foreground hover:text-primary transition-colors">Services</a>
+          <a href="/portfolio" className="text-foreground hover:text-primary transition-colors">Portfolio</a>
+          <a href="/contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
         </nav>
 
-        <Button variant="premium">
+        <Button variant="default">
           Book Now
         </Button>
       </div>

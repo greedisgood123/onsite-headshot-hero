@@ -8,10 +8,10 @@ export const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Team's Professional Image?
+              Ready to Elevate Your Events?
             </h2>
             <p className="text-lg mb-8 text-primary-foreground/80">
-              Contact us today to schedule your on-site headshot session and give your team the professional edge they deserve.
+              Let's discuss your livestreaming and photography needs. Professional service delivered on-site across Malaysia.
             </p>
             <Button variant="secondary" size="lg">
               Book Your Session
@@ -35,7 +35,7 @@ export const Footer = () => {
               </div>
               <div>
                 <div className="font-semibold">Email Us</div>
-                <div className="text-primary-foreground/80">hello@headshotpro.my</div>
+                <div className="text-primary-foreground/80">hello@ainan.studio</div>
               </div>
             </div>
 

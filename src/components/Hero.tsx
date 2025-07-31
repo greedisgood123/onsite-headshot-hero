@@ -22,12 +22,12 @@ export const Hero = () => {
         </Badge>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          Professional On-Site
-          <span className="block text-accent">Headshot Packages</span>
+          <span className="text-primary">Livestream</span> Experts
+          <span className="block">Professional Coverage</span>
         </h1>
 
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          We bring a studio-quality headshot experience to your office — saving your team hours of travel while ensuring everyone looks their best.
+          Premium livestreaming, event coverage, and corporate photography delivered at your location. Professional equipment and exceptional results.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
