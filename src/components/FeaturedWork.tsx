@@ -51,18 +51,18 @@ export const FeaturedWork = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="inline-flex items-center bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium shadow-md">
                     <project.icon className="w-4 h-4 mr-2" />
                     {project.category}
                   </span>
                 </div>
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-sm opacity-90">{project.description}</p>
-                </div>
               </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-foreground">{project.title}</h3>
+                <p className="text-muted-foreground">{project.description}</p>
+              </CardContent>
             </Card>
           ))}
         </div>
