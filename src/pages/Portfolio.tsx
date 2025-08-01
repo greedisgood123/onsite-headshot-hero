@@ -86,10 +86,19 @@ const Portfolio = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 to-accent/5 py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-foreground mb-6">Our Portfolio</h1>
-          <p className="text-xl text-muted-foreground">
+      <section className="relative py-20 px-6 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/placeholder.svg" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">Our Portfolio</h1>
+          <p className="text-xl text-white/90">
             Showcasing our expertise in livestreaming, event coverage, and professional photography
           </p>
         </div>
