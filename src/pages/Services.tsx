@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -75,46 +76,58 @@ const Services = () => {
       {/* Services Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          {services.map((service, index) => (
-            <div key={index} className="mb-20">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-foreground mb-4">{service.title}</h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  {service.description}
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                {service.pricing.map((tier, tierIndex) => (
-                  <Card key={tierIndex} className={`shadow-soft ${tier.tier === "Premium" ? "border-primary shadow-elegant" : ""}`}>
-                    <CardHeader>
-                      <CardTitle className="text-2xl">{tier.tier}</CardTitle>
-                      <CardDescription className="text-3xl font-bold text-primary">{tier.price}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-3">
-                        {tier.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-foreground">
-                            <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                    <CardFooter>
-                      <Button 
-                        className="w-full" 
-                        variant={tier.tier === "Premium" ? "default" : "outline"}
-                        onClick={() => setFormData({...formData, service: `${service.title} - ${tier.tier}`})}
-                      >
-                        Select Package
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          ))}
+          <Tabs defaultValue="livefeed" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-12">
+              <TabsTrigger value="livefeed">Livefeed Recording</TabsTrigger>
+              <TabsTrigger value="headshots">Corporate Headshots</TabsTrigger>
+              <TabsTrigger value="events">Event Coverage</TabsTrigger>
+            </TabsList>
+
+            {services.map((service, index) => (
+              <TabsContent 
+                key={index} 
+                value={index === 0 ? "livefeed" : index === 1 ? "headshots" : "events"}
+                className="space-y-8"
+              >
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl font-bold text-foreground mb-4">{service.title}</h2>
+                  <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    {service.description}
+                  </p>
+                </div>
+                
+                <div className="grid md:grid-cols-3 gap-8">
+                  {service.pricing.map((tier, tierIndex) => (
+                    <Card key={tierIndex} className={`shadow-soft ${tier.tier === "Premium" ? "border-primary shadow-elegant" : ""}`}>
+                      <CardHeader>
+                        <CardTitle className="text-2xl">{tier.tier}</CardTitle>
+                        <CardDescription className="text-3xl font-bold text-primary">{tier.price}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <ul className="space-y-3">
+                          {tier.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center text-foreground">
+                              <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                      <CardFooter>
+                        <Button 
+                          className="w-full" 
+                          variant={tier.tier === "Premium" ? "default" : "outline"}
+                          onClick={() => setFormData({...formData, service: `${service.title} - ${tier.tier}`})}
+                        >
+                          Select Package
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
         </div>
       </section>
 
