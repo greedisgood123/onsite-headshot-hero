@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -117,7 +118,8 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item) => (
-              <Card key={item.id} className="group overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-300">
+              <Link key={item.id} to={`/portfolio/${item.id}`}>
+                <Card className="group overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-300 cursor-pointer">
                 <div className="relative aspect-video overflow-hidden">
                   <img
                     src={item.image}
@@ -135,7 +137,8 @@ const Portfolio = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
                 </CardContent>
-              </Card>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
