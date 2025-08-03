@@ -6,13 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Slider } from "@/components/ui/slider";
+import { Switch } from "@/components/ui/switch";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const Services = () => {
   const { toast } = useToast();
-  const [isFullDay, setIsFullDay] = useState([0]); // 0 = half day, 1 = full day
+  const [isFullDay, setIsFullDay] = useState(false); // false = half day, true = full day
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -128,38 +128,34 @@ const Services = () => {
                         {service.description}
                       </p>
                       
-                      {/* Day Duration Slider */}
+                      {/* Day Duration Toggle */}
                       <div className="max-w-md mx-auto mb-8">
-                        <div className="flex justify-between items-center mb-4">
-                          <span className={`text-lg font-medium ${isFullDay[0] === 0 ? 'text-primary' : 'text-muted-foreground'}`}>
+                        <div className="flex items-center justify-center gap-4 p-4 bg-muted/50 rounded-lg">
+                          <span className={`text-lg font-medium transition-colors ${!isFullDay ? 'text-primary' : 'text-muted-foreground'}`}>
                             Half Day
                           </span>
-                          <span className={`text-lg font-medium ${isFullDay[0] === 1 ? 'text-primary' : 'text-muted-foreground'}`}>
+                          <Switch
+                            checked={isFullDay}
+                            onCheckedChange={setIsFullDay}
+                          />
+                          <span className={`text-lg font-medium transition-colors ${isFullDay ? 'text-primary' : 'text-muted-foreground'}`}>
                             Full Day
                           </span>
                         </div>
-                        <Slider
-                          value={isFullDay}
-                          onValueChange={setIsFullDay}
-                          max={1}
-                          min={0}
-                          step={1}
-                          className="w-full"
-                        />
                       </div>
                     </div>
                     
                     <div className="grid md:grid-cols-3 gap-8">
                       {eventPackages.map((pkg, pkgIndex) => {
-                        const currentPricing = isFullDay[0] === 0 ? pkg.halfDay : pkg.fullDay;
-                        const duration = isFullDay[0] === 0 ? "Half Day" : "Full Day";
-                        const deliveryTime = isFullDay[0] === 0 ? "14 working days" : "21 working days";
+                        const currentPricing = isFullDay ? pkg.fullDay : pkg.halfDay;
+                        const duration = isFullDay ? "Full Day" : "Half Day";
+                        const deliveryTime = isFullDay ? "21 working days" : "14 working days";
                         
                         return (
-                          <Card key={pkgIndex} className={`shadow-soft ${pkg.isPopular ? "border-primary shadow-elegant" : ""} relative`}>
+                          <Card key={pkgIndex} className={`shadow-soft ${pkg.isPopular ? "border-primary shadow-elegant" : ""} relative ${pkg.isPopular ? "mt-6" : ""}`}>
                             {pkg.isPopular && (
-                              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                                <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
+                              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                                <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg">
                                   Most Popular
                                 </span>
                               </div>
