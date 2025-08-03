@@ -23,7 +23,7 @@ export const FeaturedWork = () => {
     {
       id: 3,
       title: "Wedding Full Recording",
-      description: "Complete ceremony and reception with cinematic highlights",
+      description: "Complete recording of ceremony and reception from start till finish",
       image: "/placeholder.svg",
       category: "Event Coverage",
       icon: Zap
