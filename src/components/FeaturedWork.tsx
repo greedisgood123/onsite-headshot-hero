@@ -14,11 +14,11 @@ export const FeaturedWork = () => {
     },
     {
       id: 2,
-      title: "Corporate Headshot Session",
-      description: "Professional headshots for 40+ executives in a single day",
+      title: "Video Event Highlight",
+      description: "Professional videos showing the best moments of an event.",
       image: "/placeholder.svg",
-      category: "Photography",
-      icon: Camera
+      category: "Videography",
+      icon: Video
     },
     {
       id: 3,
