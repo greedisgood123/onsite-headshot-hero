@@ -6,7 +6,7 @@ export const FeaturedWork = () => {
   const featuredProjects = [
     {
       id: 1,
-      title: "Tech Conference Live Stream",
+      title: "International Speaker Events",
       description: "Multi-camera setup for 1,000+ attendees with real-time streaming",
       image: "/placeholder.svg",
       category: "Livefeed",
@@ -15,7 +15,7 @@ export const FeaturedWork = () => {
     {
       id: 2,
       title: "Corporate Headshot Session",
-      description: "Professional headshots for 50+ executives in a single day",
+      description: "Professional headshots for 40+ executives in a single day",
       image: "/placeholder.svg",
       category: "Photography",
       icon: Camera
