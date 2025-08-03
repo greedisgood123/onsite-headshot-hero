@@ -18,7 +18,7 @@ export const FeaturedWork = () => {
       description: "Professional videos showing the best moments of an event.",
       image: "/placeholder.svg",
       category: "Videography",
-      icon: Video
+      icon: Photography
     },
     {
       id: 3,
