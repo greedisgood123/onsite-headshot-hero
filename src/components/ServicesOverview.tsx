@@ -9,20 +9,20 @@ export const ServicesOverview = () => {
       title: "Livefeed Full Event Recording",
       description: "Professional live streaming with multi-camera setups, real-time broadcasting, and high-quality recording for events of any size.",
       features: ["Multi-camera setup", "4K/8K recording", "Live streaming", "Professional audio"],
-      startingPrice: "RM 2,500"
+      startingPrice: "RM 3,500"
     },
     {
       icon: Camera,
       title: "Corporate Headshots",
       description: "On-site professional headshots for individuals and teams, perfect for LinkedIn profiles, company websites, and marketing materials.",
       features: ["On-site service", "Professional lighting", "Quick turnaround", "Digital delivery"],
-      startingPrice: "RM 300"
+      startingPrice: "RM 350"
     },
     {
       icon: Mic,
       title: "Event Coverage",
       description: "Comprehensive event documentation including photography, videography, and highlight reels for corporate events and special occasions.",
-      features: ["Photo + video", "Highlight reels", "Same-day delivery", "Multiple formats"],
+      features: ["Photo + video", "Highlight reels", "Unlimited images", "24 hour preview"],
       startingPrice: "RM 1,800"
     }
   ];
@@ -35,7 +35,7 @@ export const ServicesOverview = () => {
             Our Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Professional livestreaming and photography services delivered on-site across Kuala Lumpur and Selangor
+            Professional livestreaming and photography services delivered on-site across Kuala Lumpur and Malaysia
           </p>
         </div>
 
