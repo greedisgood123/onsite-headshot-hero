@@ -27,7 +27,7 @@ export const Hero = () => {
         </h1>
 
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          Premium livestreaming, event coverage, and corporate photography delivered at your location. Professional equipment and exceptional results.
+          Premium livestreaming, event coverage, and corporate photography delivered at your location.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
