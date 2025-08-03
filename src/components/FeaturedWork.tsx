@@ -22,7 +22,7 @@ export const FeaturedWork = () => {
     },
     {
       id: 3,
-      title: "Wedding Live Coverage",
+      title: "Wedding Full Recording",
       description: "Complete ceremony and reception with cinematic highlights",
       image: "/placeholder.svg",
       category: "Event Coverage",
